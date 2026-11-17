@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteStore Gastro | Software de Gestión para Pizzerías, Rotiserías y Locales de Comida</title>
+    <meta name="description" content="Terminá con el caos en hora pico. Tomá pedidos, mandá comandas a cocina y controlá tu caja en segundos con ByteStore Gastro.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Configuración de colores personalizados de ByteStore -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0F172A',    // Azul pizarra oscuro
+                            accent: '#F97316',  // Naranja acción
+                            accentHover: '#EA580C',
+                            light: '#F8FAFC'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light text-slate-800 antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-brand-dark rounded-lg flex items-center justify-center text-white font-extrabold text-lg">
+                    B<span class="text-brand-accent">.</span>
+                </div>
+                <span class="font-extrabold text-xl tracking-tight text-brand-dark">
+                    ByteStore <span class="text-brand-accent font-semibold text-base">Gastro</span>
+                </span>
+            </a>
+
+            <!-- Enlaces Desktop -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#problemas" class="hover:text-brand-dark transition">¿Por qué cambiar?</a>
+                <a href="#funciones" class="hover:text-brand-dark transition">Funciones</a>
+                <a href="#rubros" class="hover:text-brand-dark transition">Rubros</a>
+                <a href="#planes" class="hover:text-brand-dark transition">Planes</a>
+            </nav>
+
+            <!-- CTA Header -->
+            <a href="#demo" class="bg-brand-accent hover:bg-brand-accentHover text-white text-sm font-semibold px-4 py-2.5 rounded-lg shadow-sm transition">
+                Pedir Demo Gratis
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="pt-12 pb-20 md:pt-20 md:pb-28 px-4 sm:px-6 overflow-hidden">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Texto Principal -->
+            <div class="lg:col-span-6 space-y-6">
+                <div class="inline-flex items-center gap-2 bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1.5 rounded-full">
+                    <span class="w-2 h-2 bg-brand-accent rounded-full animate-pulse"></span>
+                    SISTEMA PARA GASTRONOMÍA RÁPIDA
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-brand-dark leading-tight tracking-tight">
+                    Terminá con el caos en hora pico. Controlá pedidos, cocina y caja en segundos.
+                </h1>
+
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    El software diseñado para <strong>pizzerías, rotiserías, hamburgueserías y bares</strong> que necesitan velocidad en el mostrador y cero errores en las comandas.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                    <a href="#demo" class="bg-brand-accent hover:bg-brand-accentHover text-white font-bold text-center px-6 py-4 rounded-xl shadow-lg shadow-orange-500/25 transition">
+                        Solicitar Demo en mi Local
+                    </a>
+                    <a href="#funciones" class="bg-white hover:bg-slate-50 text-brand-dark border border-slate-300 font-semibold text-center px-6 py-4 rounded-xl transition">
+                        Ver cómo funciona
+                    </a>
+                </div>
+
+                <p class="text-xs text-slate-500 flex items-center gap-4 pt-2">
+                    <span>✓ Sin contratos de permanencia</span>
+                    <span>✓ Soporte directo por WhatsApp</span>
+                </p>
+            </div>
+
+            <!-- Mockup Visual del Sistema (Reemplazable por tu captura real) -->
+            <div class="lg:col-span-6">
+                <div class="bg-brand-dark rounded-2xl p-3 sm:p-4 shadow-2xl border border-slate-700 transform lg:rotate-1 hover:rotate-0 transition duration-300">
+                    <!-- Barra superior de ventana -->
+                    <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-700">
+                        <div class="flex items-center gap-1.5">
+                            <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                        </div>
+                        <span class="text-xs text-slate-400 font-mono">ByteStore POS — Turno Noche (Viernes)</span>
+                        <span class="text-xs bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded font-medium">● En línea</span>
+                    </div>
+
+                    <!-- Simulación de Interfaz Mostrador + Cocina -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                        <!-- Panel Izquierdo: Toma de Pedido -->
+                        <div class="bg-slate-800 rounded-xl p-3 space-y-2.5">
+                            <div class="flex justify-between items-center text-white font-bold">
+                                <span>Mostrador #104</span>
+                                <span class="text-brand-accent">$24.500</span>
+                            </div>
+                            <div class="space-y-1.5 text-slate-300">
+                                <div class="bg-slate-700/60 p-2 rounded flex justify-between">
+                                    <span>1x Pizza Grande Mitad Muzza / Napo</span>
+                                    <span class="font-semibold">$14.000</span>
+                                </div>
+                                <div class="bg-slate-700/60 p-2 rounded flex justify-between">
+                                    <span>4x Empanadas Carne Cortada</span>
+                                    <span class="font-semibold">$7.200</span>
+                                </div>
+                                <div class="bg-slate-700/60 p-2 rounded flex justify-between">
+                                    <span>1x Gaseosa 1.5L</span>
+                                    <span class="font-semibold">$3.300</span>
+                                </div>
+                            </div>
+                            <div class="pt-1">
+                                <div class="w-full bg-brand-accent text-white font-bold text-center py-2 rounded-lg">
+                                    MARCHANDO A COCINA →
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel Derecho: Pantalla KDS Cocina -->
+                        <div class="bg-slate-900 rounded-xl p-3 border border-slate-700 space-y-2.5">
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-400 font-bold uppercase tracking-wider text-[10px]">Pantalla Cocina (KDS)</span>
+                                <span class="bg-amber-500/20 text-amber-400 px-1.5 py-0.5 rounded text-[10px] font-bold">12 min</span>
+                            </div>
+                            <div class="border-l-4 border-brand-accent pl-2.5 py-1 space-y-1">
+                                <p class="text-white font-bold">Pedido #103 — Delivery</p>
+                                <p class="text-slate-300">• 2x Hamburguesa Completa (Sin cebolla)</p>
+                                <p class="text-slate-300">• 1x Porción Papas Cheddar</p>
+                            </div>
+                            <div class="border-l-4 border-emerald-500 pl-2.5 py-1 space-y-1 opacity-75">
+                                <p class="text-white font-bold">Pedido #102 — Retira Local</p>
+                                <p class="text-slate-300">• 1x Pollo al Spiedo c/ Fritas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center text-xs text-slate-400 mt-3">Vista previa del panel sincronizado Mostrador + Cocina</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EL PROBLEMA -->
+    <section id="problemas" class="py-16 bg-white border-y border-slate-200 px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold text-brand-dark">¿Te suena familiar un viernes a las 21:30 hs?</h2>
+                <p class="text-slate-600 mt-3">Cuando el local se llena, los papelitos y las planillas sueltas te hacen perder plata y clientes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                    <div class="w-10 h-10 bg-red-100 text-red-600 rounded-lg flex items-center justify-center font-bold text-xl mb-4">✕</div>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">Comandas perdidas o ilegibles</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Tickets escritos a las apuradas con tachaduras que confunden al pizzero o cocinero y terminan en pedidos devueltos.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                    <div class="w-10 h-10 bg-red-100 text-red-600 rounded-lg flex items-center justify-center font-bold text-xl mb-4">⏱</div>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">Cuellos de botella en el mostrador</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Clientes haciendo fila para pedir o pagar mientras el cajero suma precios de memoria o busca cambios en la carta.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                    <div class="w-10 h-10 bg-red-100 text-red-600 rounded-lg flex items-center justify-center font-bold text-xl mb-4">$</div>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">Cierres de caja que no cierran</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Terminar la jornada agotado y no saber con exactitud cuánto entró en efectivo, cuánto por transferencia y qué se gastó.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FUNCIONES ESTRELLA -->
+    <section id="funciones" class="py-20 px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-brand-accent font-bold text-xs uppercase tracking-wider">La Solución ByteStore</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-2">Todo tu local conectado y bajo control</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 flex gap-5">
+                    <div class="w-12 h-12 shrink-0 bg-orange-100 text-brand-accent rounded-xl flex items-center justify-center font-extrabold text-xl">1</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-brand-dark mb-2">Toma de pedidos en 3 clics</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Cargá pedidos de mostrador, salón o delivery al instante. Configurá gustos de empanadas, pizzas mitad y mitad, agregados y notas para cocina sin escribir de más.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 flex gap-5">
+                    <div class="w-12 h-12 shrink-0 bg-orange-100 text-brand-accent rounded-xl flex items-center justify-center font-extrabold text-xl">2</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-brand-dark mb-2">Conexión directa con Cocina (KDS o Ticket)</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Apenas se confirma el pedido en caja, aparece en la pantalla de cocina o sale por comandera térmica, ordenado por horario de llegada para que nada se atrase.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 flex gap-5">
+                    <div class="w-12 h-12 shrink-0 bg-orange-100 text-brand-accent rounded-xl flex items-center justify-center font-extrabold text-xl">3</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-brand-dark mb-2">Seguimiento de Delivery y Retiros</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Visualizá de un vistazo qué pedido está en el horno, cuál está listo en el mostrador para retirar y cuál ya salió con el repartidor.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 flex gap-5">
+                    <div class="w-12 h-12 shrink-0 bg-orange-100 text-brand-accent rounded-xl flex items-center justify-center font-extrabold text-xl">4</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-brand-dark mb-2">Arqueo de Caja Blindado</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Cerrá el turno en un clic con el detalle exacto por medio de pago (Efectivo, Mercado Pago, Transferencia, Débito) y registro de gastos o retiros.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RUBROS -->
+    <section id="rubros" class="py-14 bg-brand-dark text-white px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-2xl font-bold mb-8">Diseñado a medida para el ritmo de:</h2>
+            <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
+                <span class="bg-slate-800 border border-slate-700 px-5 py-2.5 rounded-full text-sm font-medium">🍕 Pizzerías y Empanaderías</span>
+                <span class="bg-slate-800 border border-slate-700 px-5 py-2.5 rounded-full text-sm font-medium">🍗 Rotiserías y Casas de Comidas</span>
+                <span class="bg-slate-800 border border-slate-700 px-5 py-2.5 rounded-full text-sm font-medium">🍔 Hamburgueserías y Pancherías</span>
+                <span class="bg-slate-800 border border-slate-700 px-5 py-2.5 rounded-full text-sm font-medium">🍺 Cervecerías y Bares</span>
+                <span class="bg-slate-800 border border-slate-700 px-5 py-2.5 rounded-full text-sm font-medium">🍽️ Restaurantes con Salón</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANES -->
+    <section id="planes" class="py-20 px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <h2 class="text-3xl font-extrabold text-brand-dark">Planes claros, sin costos ocultos</h2>
+                <p class="text-slate-600 mt-3">Abono mensual accesible. Empezá hoy y escalá a medida que crece tu local.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                <!-- Plan 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-lg text-brand-dark">Plan Mostrador</h3>
+                    <p class="text-xs text-slate-500 mt-1">Ideal para rotiserías y comida al paso</p>
+                    <div class="my-6">
+                        <span class="text-3xl font-extrabold text-brand-dark">Consultar</span>
+                        <span class="text-sm text-slate-500">/ mes</span>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-600 mb-8">
+                        <li>✓ 1 Punto de Venta (Caja / Mostrador)</li>
+                        <li>✓ Impresión de tickets / comandas</li>
+                        <li>✓ Control de caja y medios de pago</li>
+                        <li>✓ Soporte técnico por WhatsApp</li>
+                    </ul>
+                    <a href="#demo" class="block w-full text-center bg-slate-100 hover:bg-slate-200 text-brand-dark font-bold py-3 rounded-xl transition">
+                        Consultar Plan
+                    </a>
+                </div>
+
+                <!-- Plan 2 (Destacado) -->
+                <div class="bg-brand-dark text-white p-8 rounded-2xl shadow-xl border-2 border-brand-accent relative">
+                    <span class="absolute -top-3.5 right-6 bg-brand-accent text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase">
+                        Más Elegido
+                    </span>
+                    <h3 class="font-bold text-lg">Plan Cocina Conectada</h3>
+                    <p class="text-xs text-slate-400 mt-1">Para pizzerías, hamburgueserías y bares</p>
+                    <div class="my-6">
+                        <span class="text-3xl font-extrabold">Consultar</span>
+                        <span class="text-sm text-slate-400">/ mes</span>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                        <li>✓ Todo lo del Plan Mostrador</li>
+                        <li>✓ <strong>Pantalla de Cocina en vivo (KDS)</strong></li>
+                        <li>✓ Gestión de Mesas / Salón y Delivery</li>
+                        <li>✓ Reportes de productos más vendidos</li>
+                        <li>✓ Capacitación inicial incluida</li>
+                    </ul>
+                    <a href="#demo" class="block w-full text-center bg-brand-accent hover:bg-brand-accentHover text-white font-bold py-3 rounded-xl transition">
+                        Pedir Demo de este Plan
+                    </a>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-lg text-brand-dark">Plan Multi-Sucursal</h3>
+                    <p class="text-xs text-slate-500 mt-1">Para cadenas o locales con varios puntos</p>
+                    <div class="my-6">
+                        <span class="text-3xl font-extrabold text-brand-dark">A medida</span>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-600 mb-8">
+                        <li>✓ Múltiples cajas y pantallas KDS</li>
+                        <li>✓ Panel centralizado para el dueño</li>
+                        <li>✓ Control de stock e insumos</li>
+                        <li>✓ Soporte prioritario</li>
+                    </ul>
+                    <a href="#demo" class="block w-full text-center bg-slate-100 hover:bg-slate-200 text-brand-dark font-bold py-3 rounded-xl transition">
+                        Hablar con Asesor
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO / DEMO -->
+    <section id="demo" class="py-20 bg-white border-t border-slate-200 px-4 sm:px-6">
+        <div class="max-w-xl mx-auto bg-brand-light p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-dark">Probá ByteStore Gastro en tu local</h2>
+                <p class="text-sm text-slate-600 mt-2">Dejanos tus datos y te mostramos el sistema funcionando en 10 minutos, sin compromiso.</p>
+            </div>
+
+            <form id="demoForm" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Tu Nombre</label>
+                    <input type="text" id="nombre" required placeholder="Ej: Martín Gómez" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-brand-accent bg-white">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nombre del Local y Rubro</label>
+                    <input type="text" id="local" required placeholder="Ej: Pizzería Don Luis" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-brand-accent bg-white">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Tu WhatsApp</label>
+                    <input type="tel" id="telefono" required placeholder="Ej: 11 1234-5678" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-brand-accent bg-white">
+                </div>
+
+                <button type="submit" class="w-full bg-brand-accent hover:bg-brand-accentHover text-white font-bold py-4 rounded-xl shadow-lg shadow-orange-500/20 transition cursor-pointer">
+                    Quiero ver la Demo por WhatsApp →
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-slate-400 py-10 px-4 sm:px-6 text-sm">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <span class="text-white font-extrabold text-lg">ByteStore<span class="text-brand-accent">.</span></span>
+                <p class="text-xs mt-1">Tecnología simple para comercios que no paran.</p>
+            </div>
+            <div class="text-xs text-center sm:text-right">
+                <p>Contacto: ventas@bytestore.com.ar</p>
+                <p class="mt-1">© 2026 ByteStore Software. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT PARA ENVIAR EL FORMULARIO DIRECTO A TU WHATSAPP -->
+    <script>
+        document.getElementById('demoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // REEMPLAZÁ ESTE NÚMERO POR TU WHATSAPP REAL (con código de país 549 + código de área)
+            const miNumeroWhatsApp = "5491100000000"; 
+            
+            const nombre = document.getElementById('nombre').value;
+            const local = document.getElementById('local').value;
+            const telefono = document.getElementById('telefono').value;
+
+            const mensaje = `Hola ByteStore! Soy *${nombre}* de *${local}* (Tel: ${telefono}). Me gustaría pedir una demo del sistema gastronómico.`;
+            const url = `https://wa.me/${miNumeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+            
+            window.open(url, '_blank');
+        });
+    </script>
+
+</body>
+</html>
