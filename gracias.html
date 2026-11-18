@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Solicitud Recibida! | Comanditas by ByteStore</title>
+    <meta name="robots" content="noindex">
+    
+    <!-- Favicon SVG integrado -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230F172A'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='60' fill='%23F97316'>C</text></svg>">
+
+    <style>
+        :root {
+            --brand-dark: #0F172A;
+            --brand-accent: #F97316;
+            --brand-accent-hover: #EA580C;
+            --brand-light: #F8FAFC;
+            --text-main: #1E293B;
+            --text-muted: #475569;
+            --border-color: #E2E8F0;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--brand-light);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            line-height: 1.5;
+        }
+
+        header {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            padding: 18px 20px;
+        }
+
+        .nav-inner {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background-color: var(--brand-dark);
+            color: var(--brand-accent);
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.25rem;
+        }
+
+        .logo-title {
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--brand-dark);
+            display: block;
+            line-height: 1.1;
+        }
+
+        .logo-by {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .logo-by span {
+            color: var(--brand-accent);
+            font-weight: 700;
+        }
+
+        main {
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .thank-card {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-top: 5px solid var(--brand-accent);
+            border-radius: 22px;
+            max-width: 560px;
+            width: 100%;
+            padding: 44px 32px;
+            text-align: center;
+            box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.1);
+        }
+
+        .check-circle {
+            width: 68px;
+            height: 68px;
+            background-color: #DCFCE7;
+            color: #16A34A;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 0 auto 24px;
+        }
+
+        h1 {
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: var(--brand-dark);
+            margin-bottom: 12px;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.02rem;
+            margin-bottom: 28px;
+        }
+
+        .steps-box {
+            background-color: var(--brand-light);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .steps-box h2 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--brand-dark);
+            margin-bottom: 12px;
+        }
+
+        .steps-box ul {
+            list-style: none;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .steps-box li {
+            margin-bottom: 8px;
+            padding-left: 22px;
+            position: relative;
+        }
+
+        .steps-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--brand-accent);
+            font-weight: 800;
+        }
+
+        .btn-back {
+            display: inline-block;
+            background-color: var(--brand-dark);
+            color: var(--white);
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn-back:hover {
+            background-color: var(--brand-accent);
+            transform: translateY(-1px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 0.8rem;
+            color: #64748B;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">C</div>
+                <div>
+                    <span class="logo-title">Comanditas</span>
+                    <span class="logo-by">by <span>ByteStore</span></span>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="thank-card">
+            <div class="check-circle">✓</div>
+            <h1>¡Recibimos tu solicitud!</h1>
+            <p class="subtitle">Gracias por interesarte en <strong>Comanditas</strong>. Ya tenemos tus datos en nuestro sistema.</p>
+
+            <div class="steps-box">
+                <h2>¿Cómo seguimos ahora?</h2>
+                <ul>
+                    <li>Revisamos los datos de tu local para preparar una muestra adaptada a tu rubro.</li>
+                    <li>Nos comunicamos con vos a la brevedad al contacto que nos dejaste.</li>
+                    <li>Coordinamos una demo rápida de 10 minutos para que lo veas funcionar en vivo.</li>
+                </ul>
+            </div>
+
+            <a href="index.html" class="btn-back">← Volver a la página principal</a>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 ByteStore — Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>
